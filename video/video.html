@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>
+      Message
+    </title>
+	<script src="jquery/jquery.js"></script>
+	<script src="jquery/jquery.base64.js"></script>
+	<link href="video-js/video-js.css" rel="stylesheet">
+	<script src="video-js/video.js"></script>
+	<script src="getFlv.js"></script>
+	
+	<script src="js/avos/av.js"></script>
+	<script src="DAO.js"></script>
+  </head>
+  <body>
+	<input id="input" style="width:500px;" type="text" name="test" value="http://www.tudou.com/albumplay/HehVux2ArMw/bbGCIcRCecU.html"/>
+	<input id="submit" width= "50" type="button" value="push it"/>
+	test
+	<div id="result" style="display:none;"></div>
+	<video id="example_video_1" class="video-js vjs-default-skin"
+	  controls preload="auto" width="640" height="264"
+	  poster="http://video-js.zencoder.com/oceans-clip.png"
+	  data-setup='{"example_option":true}'>
+	 <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+	</video>
+	<input id="set_timer_input" type="text"/>
+	<input id="set_timer_button" type="button" value="set timer"/>
+	<br/>
+	
+	<input id="fullscreen_button" type="button" value="fullscreen"/>
+	<br/>
+	<input id="set_width_input" type="text"/>
+	<input id="set_height_input" type="text"/>
+	<input id="set_size_button" type="button" value="set_size"/>
+	</body>
+  <script>
+  $(document).ready(function(){
+	var myPlayer = videojs('example_video_1');
+	$("#submit").click(function(){
+		var url = $("#input").val();
+		var scriptUrl = "http://www.flvxz.com/getFlv.php?url=" + vurlencode(url);
+		$.getScript(scriptUrl, function(){
+			var video_url=$("#result").find("a").get(6).href;
+			console.log(video_url);
+			
+			myPlayer.src(video_url);
+			//myPlayer.poster('http://example.com/myImage.jpg');
+			//myPlayer.enableTouchActivity()
+			myPlayer.play();
+		});
+	});
+	
+	$("#set_timer_button").click(function(){
+		var time = $("#set_timer_input").val();
+			myPlayer.currentTime(parseInt(time));
+	});
+	
+	$("#fullscreen_button").click(function(){
+		myPlayer.requestFullscreen();
+	});
+	
+	$("#set_size_button").click(function(){
+		var width = $("#set_width_input").val();
+		var height = $("#set_height_input").val();
+			myPlayer.dimensions(parseInt(width),parseInt(height));
+	});
+	//myPlayer.exitFullscreen();
+	//off( [type], [fn] )
+	//pause()
+	
+  });
+  </script>
+</html>

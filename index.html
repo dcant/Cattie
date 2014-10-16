@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>喵众 Cattie 首页</title>
+    <meta name="keywords" content="喵众 Cattie" />
+    <meta name="description" content="喵众 Cattie 聚众看片，是一种逼格" />
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    
+    <link rel="stylesheet" href="css/normalize.css" /> <!-- reset style -->
+	<link rel="stylesheet" href="css/base.css" /> <!-- basic style -->
+    <link rel="stylesheet" type="text/css" href="css/jquery.validator.css"/> <!-- form -->
+	
+    <script src="js/vendor/jquery-1.10.2.min.js"></script> <!-- jQuery library -->
+    <script src="js/vendor/jquery-ui-1.11.1.js"></script> <!-- jQuery UI library -->
+	<script src="js/vendor/jquery.base64.js"></script>
+    <script src="js/vendor/respond.min.js"></script> <!-- @medio for IE6-8  -->
+
+    
+    
+    <!--[if (gte IE 6)&(lte IE 8)]>  
+      <script type="text/javascript" src="js/vendor/selectivizr.js"></script>
+    <![endif]--> <!--/*修正CSS3在IE6-8*/-->
+    
+    <!--[if lt IE 9]>
+       <script src="js/html5.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+<!--[if lt IE 8]>
+    <div class="cp-tips">
+    	<span class="cp-tips-close" title="关闭"></span>
+        <p>已经有超过90%的用户使用更高版本 <a target="_blank" title="下载Chrome" href="http://www.google.cn/intl/zh-CN/chrome/">Google Chrome</a> 或 <a target="_blank" href="http://windows.microsoft.com/zh-cn/internet-explorer/download-ie" title="下载最新版IE浏览器">Internet Explorer</a> 体验到了更精彩的VIPABC，您还不试试？</p>
+    </div>
+<![endif]-->
+
+
+
+<!-- wrapper -->
+<div class="wrapper">
+
+	<header class="header"> 
+    	<a href="#"><img src="images/logo.png" width="73" height="45" alt="喵众" /></a>
+    	<ul class="log-wrap">
+        	<li class="log">&nbsp;登录&nbsp;</li>
+            <li class="log">&nbsp;注册&nbsp;</li>
+        </ul>
+        <ul class="login-wrap">
+            <li id="curname" class ="log"></li>
+            <li id="logout" class="log">&nbsp;退出&nbsp;</li>
+        </ul>
+        
+    </header>
+	
+    <!-- container -->
+    <div class="container">
+    
+    	<!-- theme-title -->
+        <hgroup class="theme-title">
+            <h1><img src="images/index_word.png" width="572" height="70" alt="聚众看片，是一种逼格" /></h1>
+            <h3>异地的死党们，都来和我吐槽视频去</h3>
+        </hgroup>
+        
+        <!-- enjoy-wrap -->
+        <div class="enjoy-wrap">
+            <form id="enjoy-form" action="" method="post" autocomplete="off">
+                <div class="enjoy-input">
+                    <i><input id="enjoy-form-sumbit" class="en-btn" type="button" value="进入" /></i>
+                    <span class="en-input-wrap"><input id="enjoy-form-url" class="en-input" name="url" type="url" /></span>
+                </div>
+            </form>
+        </div>
+	</div>
+    <!-- container end -->
+
+</div>
+<!-- wrapper end -->
+
+
+
+<!-- PC login and register -->
+<div class="float-lay-bg"></div>
+
+<div class="login-register-wrap">
+	<!-- LR-title -->
+	<div class="LR-title-wrap">
+    	<span class="LR-wrap-close txt-indent">Close</span>
+    	<a class="s-logo txt-indent" href="index.html" target="_blank" title="VIPABC">index.html</a>
+        <ul class="LR-tab-title">
+        	<li class="LR-item-on">会员登录</li>
+            <li>立即注册</li>
+        </ul>
+    
+    </div>
+    <!-- LR-content-wrap -->
+    <div class="LR-content-wrap">
+    	<div class="LR-content LR-content-show">
+        	<form id="pc-login" action="" method="post" autocomplete="off">
+                <ul>
+                    <li class="LR-wrap-input-wrap LR-username"><span class="LR-span"><i></i><input class="LR-wrap-input focus_on" id="login_username" name="username" type="text"  placeholder="用户名" /></span></li>
+                    <li id="none-pwd" class="LR-wrap-input-wrap LR-pwd"><span class="LR-span"><i></i><input id="login_password" class="LR-wrap-input" name="password" type="password" placeholder="密码" /></span></li>
+                    <li class="LR-wrap-checkbox-wrap">
+                        <a id="forget-pwd" href="#" target="_blank">忘记密码？</a>
+                        <label id="noneuser-log"><input type="checkbox" style="vertical-align:-2px;" />&nbsp;&nbsp;记住登录</label>
+                     </li>
+                     <li class="LoginOthers-wrap">
+                        <span id="tudouLogin" class="LoginOthers tudouLogin"></span>
+                        <span id="doubanLogin" class="LoginOthers doubanLogin"></span>
+                        <span>第三方登录</span>
+                     </li>                     
+                    <li><input id="login_submit" class="LR-wrap-btn" type="submit" value="登录" /></li>
+                </ul>
+            </form>
+            <span id="alter1"></span>
+    	</div>
+        <div class="LR-content">
+        	<form id="pc-register" action="" method="post" autocomplete="off">
+                <ul>
+                	<li class="LR-wrap-input-wrap LR-username"><span class="LR-span"><i></i><input class="LR-wrap-input focus_on" id="register_username" name="username" type="text"  placeholder="用户名" /></span></li>
+                    <li class="LR-wrap-input-wrap LR-mail"><span class="LR-span"><i></i><input class="LR-wrap-input focus_on" id="register_email" name="email" type="email" placeholder="邮箱" /></span></li>
+                    <li class="LR-wrap-input-wrap LR-pwd"><span class="LR-span"><i></i><input class="LR-wrap-input" id="register_password" name="password" type="password" placeholder="密码" /></span></li>
+                    <li class="LR-wrap-input-wrap LR-pwd"><span class="LR-span"><i></i><input class="LR-wrap-input" id="register_repasswd" name="password[twice]" type="password" placeholder="确认密码" /></span></li>
+                    <li><input class="LR-wrap-btn" id="register_submit" type="submit" value="注册" /></li>
+               </ul>
+           </form>
+           <span id="alter2"></span>
+    	</div>
+    </div>
+	
+    <div class="clear"></div>
+</div>
+
+<!-- PC login and register end-->
+
+
+<script src="js/vendor/jquery.validator.js"></script> <!-- validform -->
+<script src="js/vendor/zh_CN.js"></script> <!-- validform Chinese -->
+<script src="js/common.js"></script> <!-- common js -->
+<script src="js/av.min.js"></script> <!-- AVos js -->
+<script src="js/DAO.js"></script> <!-- dao js -->
+<script src="video/videoUtil.js"></script> 
+<script src="js/checker.js"></script>
+<script src="js/getQueryVariable.js"></script>
+<script src="js/OAuthLogin.js"></script>
+
+
+
+
+
+<script>
+$(document).ready(function(){
+	checker();
+	$("#enjoy-form-sumbit").click(function(){
+		var url = window.location.href;
+		url = url.substring(0,url.lastIndexOf("/")+1) + "home.html";
+		url = url + "?url=" + vurlencode($("#enjoy-form-url").val());
+		//alert(url);
+		 window.location.href = url;
+	});
+});
+</script>
+</body>
+</html>

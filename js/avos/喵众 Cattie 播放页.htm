@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<!-- saved from url=(0124)http://127.0.0.1:8080/Catties/home.html?url=aHR0cDojI3d3dy50dWRvdS5jb20vYWxidW1wbGF5LzhnSUJOOVAwcDJrL1R6UUcyYzgxMnVvLmh0bWw= -->
+<html lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>喵众 Cattie 播放页</title>
+    <meta name="keywords" content="喵众 Cattie">
+    <meta name="description" content="喵众 Cattie 聚众看片，是一种逼格">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="http://127.0.0.1:8080/Catties/css/normalize.css"> <!-- reset style -->
+	<link rel="stylesheet" href="http://127.0.0.1:8080/Catties/css/base.css"> <!-- basic style -->
+    <link rel="stylesheet" type="text/css" href="./喵众 Cattie 播放页_files/jquery.validator.css"> <!-- vaildform -->
+	<link href="./喵众 Cattie 播放页_files/video-js.css" rel="stylesheet" type="text/css"> <!-- plugins videojs css -->
+
+
+    <script src="./喵众 Cattie 播放页_files/jquery-1.10.2.js"></script> <!-- jQuery library -->
+    <!--<script src="js/vendor/jquery-ui-1.11.1.js"></script>  jQuery UI library -->
+    <script src="./喵众 Cattie 播放页_files/respond.min.js"></script> <!-- @medio for IE6-8  -->
+	<!--<script src="js/vendor/jquery.zclip.min.js"></script>  jquery.zclip js -->
+	<script src="./喵众 Cattie 播放页_files/jquery.base64.js"></script>
+    <script src="./喵众 Cattie 播放页_files/jquery-ui-1.11.1.js"></script> <!-- jQuery UI library -->
+    <script src="./喵众 Cattie 播放页_files/respond.min.js"></script> <!-- @medio for IE6-8  -->
+
+    <script src="./喵众 Cattie 播放页_files/av.min.js"></script>
+	<script src="./喵众 Cattie 播放页_files/DAO.js"></script>
+
+	<script src="./喵众 Cattie 播放页_files/jquery.base64(1).js"></script>
+    <script src="./喵众 Cattie 播放页_files/jquery-ui-1.11.1.js"></script> <!-- jQuery UI library -->
+
+	
+    <script src="./喵众 Cattie 播放页_files/av.js"></script>
+
+    <!--[if (gte IE 6)&(lte IE 8)]>
+      <script type="text/javascript" src="js/vendor/selectivizr.js"></script>
+    <![endif]--> <!--/*修正CSS3在IE6-8*/-->
+
+    <!--[if lt IE 9]>
+       <script src="js/html5.js"></script>
+    <![endif]-->
+
+<style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style></head>
+
+<body style="">
+
+<div class="login-register-wrap">
+	<!-- LR-title -->
+	<div class="LR-title-wrap">
+    	<span class="LR-wrap-close txt-indent">Close</span>
+    	<a class="s-logo txt-indent" href="http://127.0.0.1:8080/Catties/index.html" target="_blank" title="VIPABC">index.html</a>
+        <ul class="LR-tab-title">
+        	<li class="LR-item-on">会员登录</li>
+            <li>立即注册</li>
+        </ul>
+    
+    </div>
+    <!-- LR-content-wrap -->
+    <div class="LR-content-wrap">
+    	<div class="LR-content LR-content-show">
+        	<form id="pc-login" action="" method="post" autocomplete="off" class="nice-validator n-default" novalidate="novalidate">
+                <ul>
+                    <li class="LR-wrap-input-wrap LR-username"><span class="LR-span"><i></i><input class="LR-wrap-input focus_on" id="login_username" name="username" type="text" placeholder="用户名" aria-required="true"></span></li>
+                    <li class="LR-wrap-input-wrap LR-pwd"><span class="LR-span"><i></i><input id="login_password" class="LR-wrap-input" name="password" type="password" placeholder="密码" aria-required="true"></span></li>
+                    <li class="LR-wrap-checkbox-wrap">
+                        <a href="http://127.0.0.1:8080/Catties/home.html?url=aHR0cDojI3d3dy50dWRvdS5jb20vYWxidW1wbGF5LzhnSUJOOVAwcDJrL1R6UUcyYzgxMnVvLmh0bWw=#" target="_blank">忘记密码？</a>
+                        <label><input type="checkbox" style="vertical-align:-2px;">&nbsp;&nbsp;下次自动登录（维持14日)</label>
+                     </li>
+                    <li><input id="login_submit" class="LR-wrap-btn" type="submit" value="登录"></li>
+                </ul>
+            </form>
+            <span id="alter1"></span>
+    	</div>
+        <div class="LR-content">
+        	<form id="pc-register" action="" method="post" autocomplete="off" class="nice-validator n-default" novalidate="novalidate">
+                <ul>
+                	<li class="LR-wrap-input-wrap LR-username"><span class="LR-span"><i></i><input class="LR-wrap-input focus_on" id="register_username" name="username" type="text" placeholder="用户名" aria-required="true"></span></li>
+                    <li class="LR-wrap-input-wrap LR-mail"><span class="LR-span"><i></i><input class="LR-wrap-input focus_on" id="register_email" name="email" type="email" placeholder="邮箱" aria-required="true"></span></li>
+                    <li class="LR-wrap-input-wrap LR-pwd"><span class="LR-span"><i></i><input class="LR-wrap-input" id="register_password" name="password" type="password" placeholder="密码" aria-required="true"></span></li>
+                    <li class="LR-wrap-input-wrap LR-pwd"><span class="LR-span"><i></i><input class="LR-wrap-input" id="register_repasswd" name="password[twice]" type="password" placeholder="确认密码" aria-required="true"></span></li>
+                    <li><input class="LR-wrap-btn" id="register_submit" type="submit" value="注册"></li>
+               </ul>
+           </form>
+           <span id="alter2"></span>
+    	</div>
+    </div>
+	
+    <div class="clear"></div>
+</div>
+
+<div class="wrapper">
+
+	<header class="header">
+    	<a href="http://127.0.0.1:8080/Catties/home.html?url=aHR0cDojI3d3dy50dWRvdS5jb20vYWxidW1wbGF5LzhnSUJOOVAwcDJrL1R6UUcyYzgxMnVvLmh0bWw=#"><img src="./喵众 Cattie 播放页_files/logo.png" width="73" height="45" alt="喵众"></a>
+		<ul class="log-wrap">
+        	<li class="log">&nbsp;登录&nbsp;</li>
+            <li class="log">&nbsp;注册&nbsp;</li>
+        </ul>
+        <ul class="login-wrap">
+            <li id="curname" class="log"></li>
+            <li id="logout" class="log">&nbsp;退出&nbsp;</li>
+        </ul>
+    </header>
+
+    <!-- container -->
+    <div class="container">
+    	<div class="player-wrap">
+            <!-- user list -->
+            <div class="home-col-R">
+       		    <h5 class="user-num">喵众：<span>5</span>人</h5>
+                <div class="user-list">
+               	 	<ul>
+                    	<li>
+                        	<span><img src="./喵众 Cattie 播放页_files/user_header.jpg" width="100%"></span>
+                        	<p>wo4316lm</p>
+                        </li>
+                        <li>
+                        	<span><img src="./喵众 Cattie 播放页_files/user_header.jpg" width="100%"></span>
+                        	<p>qwqew</p>
+                        </li>
+                        <li>
+                        	<span><img src="./喵众 Cattie 播放页_files/user_header.jpg" width="100%"></span>
+                        	<p>qwqew</p>
+                        </li>
+                        <li>
+                        	<span><img src="./喵众 Cattie 播放页_files/user_header.jpg" width="100%"></span>
+                        	<p>qwqew</p>
+                        </li>
+                        <li>
+                        	<span><img src="./喵众 Cattie 播放页_files/user_header.jpg" width="100%"></span>
+                        	<p>qwqew</p>
+                        </li>
+                    </ul>
+                    <div class="user-list-shade"></div>
+                </div>
+       	    </div>
+            <!-- user list end -->
+
+        	<!-- video-wrap -->
+        	<div class="home-col-L">
+                <h2 class="video-title">火影忍者：第322集<span class="shareLink">生成链接</span></h2>
+				
+                <div class="video-wrap">
+                    <div data-setup="{}" poster="http://video-js.zencoder.com/oceans-clip.png" preload="none" class="video-js vjs-default-skin vjs-paused vjs-controls-enabled vjs-user-inactive" id="catties_video_player" style="width: 99.7%; height: 408px;"><video id="catties_video_player_html5_api" class="vjs-tech" preload="none" poster="http://video-js.zencoder.com/oceans-clip.png" data-setup="{}" src="http://video-js.zencoder.com/oceans-clip.mp4">
+                        <source src="http://video-js.zencoder.com/oceans-clip.mp4" type="video/mp4">
+
+                   </video><div></div><div class="vjs-poster" tabindex="-1" style="background-image: url(http://video-js.zencoder.com/oceans-clip.png);"></div><div class="vjs-text-track-display"></div><div class="vjs-loading-spinner"></div><div class="vjs-big-play-button" role="button" aria-live="polite" tabindex="0" aria-label="play video"><span aria-hidden="true"></span></div><div class="vjs-control-bar"><div class="vjs-play-control vjs-control " role="button" aria-live="polite" tabindex="0"><div class="vjs-control-content"><span class="vjs-control-text">Play</span></div></div><div class="vjs-current-time vjs-time-controls vjs-control"><div class="vjs-current-time-display" aria-live="off"><span class="vjs-control-text">Current Time </span>0:00</div></div><div class="vjs-time-divider"><div><span>/</span></div></div><div class="vjs-duration vjs-time-controls vjs-control"><div class="vjs-duration-display" aria-live="off"><span class="vjs-control-text">Duration Time</span> 0:00</div></div><div class="vjs-remaining-time vjs-time-controls vjs-control"><div class="vjs-remaining-time-display" aria-live="off"><span class="vjs-control-text">Remaining Time</span> -0:00</div></div><div class="vjs-live-controls vjs-control"><div class="vjs-live-display" aria-live="off"><span class="vjs-control-text">Stream Type</span>LIVE</div></div><div class="vjs-progress-control vjs-control"><div role="slider" aria-valuenow="NaN" aria-valuemin="0" aria-valuemax="100" tabindex="0" class="vjs-progress-holder vjs-slider" aria-label="video progress bar" aria-valuetext="0:00"><div class="vjs-load-progress"><span class="vjs-control-text"><span>Loaded</span>: 0%</span></div><div class="vjs-play-progress"><span class="vjs-control-text"><span>Progress</span>: 0%</span></div><div class="vjs-seek-handle vjs-slider-handle" aria-live="off"><span class="vjs-control-text">00:00</span></div></div></div><div class="vjs-fullscreen-control vjs-control " role="button" aria-live="polite" tabindex="0"><div class="vjs-control-content"><span class="vjs-control-text">Fullscreen</span></div></div><div class="vjs-volume-control vjs-control"><div role="slider" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" tabindex="0" class="vjs-volume-bar vjs-slider" aria-label="volume level" aria-valuetext="100%"><div class="vjs-volume-level"><span class="vjs-control-text"></span></div><div class="vjs-volume-handle vjs-slider-handle"><span class="vjs-control-text">00:00</span></div></div></div><div class="vjs-mute-control vjs-control" role="button" aria-live="polite" tabindex="0"><div><span class="vjs-control-text">Mute</span></div></div><div class="vjs-playback-rate vjs-menu-button vjs-control vjs-hidden" aria-haspopup="true" role="button"><div class="vjs-control-content"><span class="vjs-control-text">Playback Rate</span></div><div class="vjs-playback-rate-value">1</div><div class="vjs-menu"><ul class="vjs-menu-content"></ul></div></div><div class="vjs-subtitles-button vjs-menu-button vjs-control " role="button" aria-live="polite" tabindex="0" aria-haspopup="true" aria-label="Subtitles Menu" style="display: none;"><div class="vjs-control-content"><span class="vjs-control-text">Subtitles</span><div class="vjs-menu"><ul class="vjs-menu-content"><li class="vjs-menu-item vjs-selected" role="button" aria-live="polite" tabindex="0" aria-selected="true">subtitles off</li></ul></div></div></div><div class="vjs-captions-button vjs-menu-button vjs-control " role="button" aria-live="polite" tabindex="0" aria-haspopup="true" aria-label="Captions Menu" style="display: none;"><div class="vjs-control-content"><span class="vjs-control-text">Captions</span><div class="vjs-menu"><ul class="vjs-menu-content"><li class="vjs-menu-item vjs-selected" role="button" aria-live="polite" tabindex="0" aria-selected="true">captions off</li></ul></div></div></div><div class="vjs-chapters-button vjs-menu-button vjs-control " role="button" aria-live="polite" tabindex="0" aria-haspopup="true" aria-label="Chapters Menu" style="display: none;"><div class="vjs-control-content"><span class="vjs-control-text">Chapters</span><div class="vjs-menu"><ul class="vjs-menu-content"><li class="vjs-menu-title">Chapters</li></ul></div></div></div></div><div class="vjs-error-display"><div></div></div></div>
+                </div>
+        	</div>
+            <!-- video-wrap end -->
+        </div>
+
+
+        <!-- chat list -->
+        <div class="chat-list-wrap">
+
+            <ul id="content">
+            	<li>
+                    <em>wo4316lm</em>
+                    <span>
+                    	<div>Hellow World !
+                        <i>20:00</i>
+                        <strong></strong>
+                        </div>
+                    </span>
+                </li>
+                <li>
+                	<em>wo4316lm</em>
+                    <span>
+                    	<div>Hellow World !Hellow World !Hellow World !Hellow World !Hellow World !Hellow World !Hellow World !Hellow World !Hellow World !Hellow World !Hellow World !Hellow World !Hellow World !Hellow World !Hellow World !
+                        <i>20:00</i>
+                        <strong></strong>
+                        </div>
+                    </span>
+                </li>
+                <li>
+                	<em>wo4316lm</em>
+                    <span>
+                    	<div>新华网北京10月11日电  全国党委秘书长会议10日至11日在京召开。会前，中共中央总书记、国家主席、中央军委主席习近平作出重要批示。他指出，崇尚实干、狠抓落实是我反复强调的。如果不沉下心来抓落实，再好的目标，再好的蓝图，也只是镜中花
+                        <i>20:00</i>
+                        <strong></strong>
+                        </div>
+                    </span>
+                </li>
+                <li></li>
+                <li></li>
+            </ul>
+
+        </div>
+        <!-- chat list end -->
+
+        <div class="comment-wrap">
+        	<input class="comment-submit" id="sendMsg" type="submit" value="提交">
+        	<span><textarea class="comment-area" id="msg" cols="123" rows="123">写点什么...喵</textarea></span>
+        </div>
+
+
+	</div>
+    <!-- container end -->
+	<div id="result"></div>
+
+</div>
+
+
+
+<div class="create-link-wrap">
+	<span></span>
+    <h2>链接已生成,快分享给小伙伴们！</h2>
+    <p id="created-link">http://www.tudou.com/albumplay/Lqfme5hSolM/xJgSB3fMBoA.html</p>
+    <div><input id="copy-link-btn" class="copy-link-btn" type="button" value="复制"></div>
+</div>
+
+
+
+<script src="./喵众 Cattie 播放页_files/video.js"></script> <!-- plugins videojs -->
+<script> <!-- Unless using the CDN hosted version, update the URL to the Flash SWF -->
+	videojs.options.flash.swf = "plugins/video-js.swf";
+</script>
+
+<script src="./喵众 Cattie 播放页_files/jquery.validator.js"></script> <!-- validform -->
+<script src="./喵众 Cattie 播放页_files/zh_CN.js"></script> <!-- validform Chinese -->
+<script src="./喵众 Cattie 播放页_files/common.js"></script> <!-- common js -->
+<script src="./喵众 Cattie 播放页_files/checker.js"></script>
+<script src="./喵众 Cattie 播放页_files/videoUtil.js"></script>
+<script src="./喵众 Cattie 播放页_files/chat.js"></script>
+<script src="./喵众 Cattie 播放页_files/cattie_chat.js"></script>
+<script>
+var userDAO = new UserDao();
+var sessionDAO = new SessionDao();
+var videoDAO = new VideoDao();
+var videoUtil =  new VideoUtil();
+
+var user = null;
+var video = null;
+var real_video_url = null;
+var player = videojs('catties_video_player');
+
+function showParticipants(session){
+	//TODO
+};
+
+function initGroup(sync, group, isowner){
+	//TODO
+};
+
+function initGroup(sync, group, isowner){
+	//TODO
+};
+
+function createGroup(callback){
+	var sync = 1111;
+	var chat = 2222;
+	callback(sync, chat);
+};
+
+function initPlayer(player, real_video_url){
+	//TODO
+}
+
+$(document).ready(function(){
+	//var encoded = vurlencode("http://www.tudou.com/albumplay/jGaFpdJqObQ/sArqU-hBvjw.html");
+	//console.log(encoded);
+	var video_url = GetQueryString("url");
+	console.log(video_url);
+	var session_id = GetQueryString("session_id");
+	console.log(session_id);
+	var decoded = vurldecode(video_url);
+	console.log(decoded);
+
+	userDAO.getCurrentOrCreate(function(data){
+		user = data;
+		if(session_id != null){
+			sessionDAO.getSession(session_id,function(data){
+				session = data;
+				if(session.owner != data.id){
+					console.log("not owner");
+				}else{
+					console.log("owner");
+				}
+				video = videoDAO.getVideo(session.video, function(data){video = data;});
+				initGroup(session.sync, session.group, session.owner == data.id);
+				
+				parseRealUrl(video.url, function(data){
+					real_video_url = data;
+					initPlayer(player, real_video_url);
+				});
+			});
+		}else{
+			//videoUtil.getInfo(decoded, function(data){
+				videoDAO.getOrCreateVideo(video_url, null, function(data){
+					video = data;
+					sessionDAO.createSession(user.id, video.id, function(data){
+						session = data;
+						createGroup(function(sync, group){
+							sessionDAO.setGroup(session.id, sync, group);
+						});
+
+						session_url = generateUrl(session, decoded);
+						enable_generate(session_url);
+						showParticipants(session);
+					});
+					if(!video.real_url){
+						real_video_url = parseRealUrl(video.url);
+						videoDAO.setRealUrl(video, real_video_url);
+					}else{
+						real_video_url = video.real_url;
+					}
+					initPlayer(player, real_video_url);
+				});
+			//});	
+		}
+	});
+
+});
+
+function addChatContent() {
+        var li = document.createElement("li");
+        var em = $("<em></em>").text(userDAO.getuser().get('username'))[0];
+        li.appendChild(em);
+        var span = document.createElement("span");
+        var div = $("<div></div>").text($('#msg')[0].value)[0];
+        $('#msg')[0].value = "";
+        var currentdate = new Date();
+        var dateTime =  currentdate.getHours() + ":"
+                + currentdate.getMinutes();
+
+        div.appendChild($("<i></i>").text(dateTime)[0]);
+        div.appendChild($("<strong></strong>").text("")[0]);
+        span.appendChild(div);
+        li.appendChild(span);
+        $('#content')[0].appendChild(li);
+}
+
+$('#sendMsg')[0].onclick = function() {
+         sendGroupMessage($('#msg')[0].value);
+        addChatContent();
+      }
+</script>
+
+
+
+</body></html>
